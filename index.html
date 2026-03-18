@@ -591,13 +591,13 @@ function drawGlow(time) {
 // ── BIRTHDAY CHECK ──
 function isBirthday() {
   const now = new Date();
-  return now.getMonth() === 3 && now.getDate() === 10; // April 10
+  return now.getMonth() === 10 && now.getDate() === 4; // Oct 4
 }
 
 // ── COUNTDOWN ──
 function getCountdown() {
   const now = new Date();
-  const bday = new Date(now.getFullYear(), 3, 10); // April 10
+  const bday = new Date(now.getFullYear(), 10, 4); // April 10
   if (now >= bday && !isBirthday()) bday.setFullYear(bday.getFullYear() + 1);
   const diff = bday - now;
   const d = Math.floor(diff / 86400000);
